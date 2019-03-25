@@ -7,9 +7,10 @@ class App extends Component {
 	constructor(){
 		super()
 		this.state={
-			Name:['SAHIL','saurabh'],
+			Name:['sahil','saurabh'],
 			student:'Student',
-			route:'home'
+			route:'home',
+			search:''
 		}
 	}
 
@@ -19,7 +20,7 @@ class App extends Component {
 			.includes(name.toLowerCase()))).toUpperCase();
 		
 		if(stu){
-		this.setState({student: stu});
+		this.setState({student: stu}); //Student's Name
 		this.changeRoute();
 		}else{
 			console.log("Wrong Student");
@@ -33,14 +34,26 @@ class App extends Component {
 			this.setState({route : 'home'});
 		}
 	}
+	onInput=(event)=>{
+		var name = event.target.value;
+		this.setState({search : name})
+		console.log(this.state.search);		
+	}
  
   render() {
-  	const {student,route} = this.state;
-  	const {onSearch,changeRoute}=this;
-    return (
+  	const {student,route,Name,search} = this.state;
+  	const {onSearch,changeRoute,onInput}=this;
+  	const filternames = Name.filter(
+			(name=>{
+					if(search){
+					return name.toLowerCase().includes(search.toLowerCase());
+					}
+			})
+		);
+    return (  
 	  <div >
 	  {route === 'home'
-	  ?<Search onSearch={onSearch}/>
+	  ?<Search names={filternames} onSearch={onSearch} onInput={onInput}/>
 	  :<Form stud={student} changeRoute={changeRoute} /> }
                 
       </div>
