@@ -1,11 +1,12 @@
 import React from 'react';
+import './form.css'
 
 const form=({stud,changeRoute})=> {
 
         return (
         <div>
         <span className="btn btn-link" href="#" onClick={changeRoute}>Back</span>
-        <div className="container" style={{border:'2px solid black',padding:'1.5em'}}>
+        <div className="container container1" style={{border:'2px solid black',padding:'1.5em'}}>
 		<div className="row">
 			<div className="col-lg-12" style={{textAlign:'center',margin:'auto'}}><h3><strong>Atharva College of Engineering</strong></h3><p>Mumbai-400 095</p><h3><strong>HALL TICKET</strong></h3></div>
 		</div>
