@@ -2,6 +2,9 @@ import React from 'react';
 import logo from './logo.jpeg';
 
 const Resume=({details})=> {
+		const {name,pnum,email,course,stream,college,board,cyear,cper,
+			cstream,hsccol,hboard,colyear,per,school,sboard,sper,syear,os,exper,
+			lan,proenv,tit,dob,lank,nat,rel,ms,add,pla,date}=details;
 		return (
 			<div>
 	 <br/>
@@ -10,7 +13,7 @@ const Resume=({details})=> {
 		<div className="jumbotron" style={{height:"80%"}}>
 			<div className="row">
 				<div className="col-lg-4">
-					<h3>{details.name}</h3>
+					<h3>{name}</h3>
 					<p>Bachelor of Engineering</p>
 					<p>ClassName of 2018</p>
 				</div>
@@ -22,8 +25,8 @@ const Resume=({details})=> {
 					<h2>Atharva College of Engineering</h2>
 					<br/>
 					<div style={{textAlign: "left"}}>
-						<p>Mobile No.:+91 {details.pnum}</p>
-						<p>Email:{details.email}</p>
+						<p>Mobile No.:+91 {pnum}</p>
+						<p>Email:{email}</p>
 					</div>
 				</div>
 			</div>
@@ -43,30 +46,30 @@ const Resume=({details})=> {
 			</div>
 			<hr style={{margin:"10px"}}/>
 			<div className="row">
-				<div className="col-lg-2"><h4>{details.course}</h4></div>
-				<div className="col-lg-2"><h4>{details.stream}</h4></div>
-				<div className="col-lg-2"><h4>{details.college}</h4></div>
-				<div className="col-lg-2"><h4>{details.board}</h4></div>
-				<div className="col-lg-2"><h4>2019</h4></div>
-				<div className="col-lg-2"><h4>7.1 (CGPA)</h4></div>
+				<div className="col-lg-2"><h4>{course}</h4></div>
+				<div className="col-lg-2"><h4>{stream}</h4></div>
+				<div className="col-lg-2"><h4>{college}</h4></div>
+				<div className="col-lg-2"><h4>{board}</h4></div>
+				<div className="col-lg-2"><h4>{cyear}</h4></div>
+				<div className="col-lg-2"><h4>{cper}</h4></div>
 			</div>
 			<hr style={{margin:"10px"}}/>
 			<div className="row">
 				<div className="col-lg-2"><h4>H.S.C</h4></div>
-				<div className="col-lg-2"><h4>Science</h4></div>
-				<div className="col-lg-2"><h4>Patkar College</h4></div>
-				<div className="col-lg-2"><h4>HSC</h4></div>
-				<div className="col-lg-2"><h4>2015</h4></div>
-				<div className="col-lg-2"><h4>73.54%</h4></div>
+				<div className="col-lg-2"><h4>{cstream}</h4></div>
+				<div className="col-lg-2"><h4>{hsccol}</h4></div>
+				<div className="col-lg-2"><h4>{hboard}</h4></div>
+				<div className="col-lg-2"><h4>{colyear}</h4></div>
+				<div className="col-lg-2"><h4>{per}</h4></div>
 			</div>
 			<hr style={{margin:"10px"}}/>
 			<div className="row">
 				<div className="col-lg-2"><h4>S.S.C</h4></div>
-				<div className="col-lg-2"><h4>-</h4></div>
-				<div className="col-lg-2"><h4>St. John's University School</h4></div>
-				<div className="col-lg-2"><h4>ICSE</h4></div>
-				<div className="col-lg-2"><h4>2013</h4></div>
-				<div className="col-lg-2"><h4>90.54%</h4></div>
+				<div className="col-lg-2"><h4>----</h4></div>
+				<div className="col-lg-2"><h4>{school}</h4></div>
+				<div className="col-lg-2"><h4>{sboard}</h4></div>
+				<div className="col-lg-2"><h4>{syear}</h4></div>
+				<div className="col-lg-2"><h4>{sper}%</h4></div>
 			</div>
 			<hr style={{margin:"10px"}}/>
 		</div>
@@ -75,19 +78,19 @@ const Resume=({details})=> {
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Operating Systems :</h3></div>
-			<div className="col-lg-6"><h4>Windows, Linux</h4></div>
+			<div className="col-lg-6"><h4>{os}</h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Expertise :</h3></div>
-			<div className="col-lg-6"><h4>Machine Learning</h4></div>
+			<div className="col-lg-6"><h4>{exper}</h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Languages :</h3></div>
-			<div className="col-lg-6"><h4>Java, C, C++, Python, HTML, SQL</h4></div>
+			<div className="col-lg-6"><h4>{lan}</h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Programming Environments :</h3></div>
-			<div className="col-lg-6"><h4>Visual Studio, Spyder, TurboC, Notepad++	,MySQL</h4></div>
+			<div className="col-lg-6"><h4>{proenv}</h4></div>
 		</div>
 		<div>
 			<h3 style={{textTransform:"uppercase",background:"darkblue",color:"white"}}>
@@ -98,7 +101,7 @@ const Resume=({details})=> {
 			<div className="col-lg-2" style={{textTransform: "uppercase",background:"lightblue"}}><h3 style={{fontSize:"3rem !important"}}>Academic Projects</h3></div>
 			<div className="col-lg-10">
 			<p  style={{fontSize:"2.5rem !important"}}>Title: Analysis and ClassNameification of product reviews.
-			Description: Using sentiment analysis, reviews of a product are classNameified as positive or negative and overall sentiment about the product is obtained. Comparative study of various algorithms in terms of accuracy is done.
+			Description: {tit}
 			</p></div>
 		</div>
 		<div>
@@ -108,29 +111,29 @@ const Resume=({details})=> {
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Date of Birth : </h3></div>
-			<div className="col-lg-6"><h4>17-09-1997</h4></div>
+			<div className="col-lg-6"><h4>{dob}</h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Languages Known : </h3></div>
-			<div className="col-lg-6"><h4>English, Hindi, Marathi, Gujarati, French</h4></div>
+			<div className="col-lg-6"><h4>{lank}</h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Nationality : </h3></div>
-			<div className="col-lg-6"><h4>Indian</h4></div>
+			<div className="col-lg-6"><h4>{nat}</h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Religion : </h3></div>
-			<div className="col-lg-6"><h4>Christian</h4></div>
+			<div className="col-lg-6"><h4>{rel}</h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Marital Status : </h3></div>
-			<div className="col-lg-6"><h4>Un-Married</h4></div>
+			<div className="col-lg-6"><h4>{ms}</h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-6"><h3>Address : </h3></div>
 			<div className="col-lg-6">
 				<h4>
-					A/301, Pran Bhuvan, L.T. Nagar, road no. 2, M.G road, Goregaon (west), Mumbai 400 062.
+					{add}
 				</h4>
 			</div>
 		</div>
@@ -146,17 +149,17 @@ const Resume=({details})=> {
 		</div>
 		<div className="row">
 			<div className="col-lg-2"><h2>Place : </h2></div>
-			<div className="col-lg-2"><h4><strong>Mumbai</strong></h4></div>
+			<div className="col-lg-2"><h4><strong>{pla}</strong></h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-2"><h2>Date : </h2></div>
-			<div className="col-lg-4"><h4><strong>5th September 2018</strong></h4></div>
+			<div className="col-lg-4"><h4><strong>{date}</strong></h4></div>
 		</div>
 		<div className="row">
 			<div className="col-lg-3"></div>
 			<div className="col-lg-3"></div>
 			<div className="col-lg-3"></div>
-			<div className="col-lg-3"><h3>Mathew Alexander Pazhur</h3></div>
+			<div className="col-lg-3"><h3>{name}</h3></div>
 		</div>
 	</div>
 	<br/>

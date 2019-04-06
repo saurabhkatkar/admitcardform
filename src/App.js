@@ -14,14 +14,37 @@ class App extends Component {
 			route:'home',
 			search:'',
 			details:{
-				Name:"",
+				name:"",
 				pnum:"",
 				email:"",
 				course:"",
 				stream:"",
 				college:"",
-				board:""
-			}
+				board:"",
+				cyear:"",
+				cstream:"",
+				hsccol:"",
+				hboard:"",
+				colyear:"",
+				per:"",
+				school:"",
+				sboard:"",
+				syear:"",
+				sper:"",
+				os:"",
+				exper:"",
+				lan:"",
+				proenv:"",
+				tit:"",
+				dob:"",
+				lank:"",
+				nat:"",
+				rel:"",
+				ms:"",
+				add:"",
+				pla:"",
+				date:""
+				}
 		}
 	}
 
@@ -61,7 +84,31 @@ class App extends Component {
 		var stream = document.getElementById('stream').value.toUpperCase();
 		var college = document.getElementById('college').value.toUpperCase();
 		var board = document.getElementById('board').value.toUpperCase();
-
+		var cyear = document.getElementById('cyear').value;
+		var cper = document.getElementById('cper').value;
+		var cstream = document.getElementById('cstream').value;
+		var hsccol= document.getElementById('hsccol').value;
+		var hboard = document.getElementById('hboard').value.toUpperCase();
+		var colyear = document.getElementById('colyear').value;
+		var per = document.getElementById('per').value;
+		var school = document.getElementById('school').value;
+		var sboard = document.getElementById('sboard').value.toUpperCase();
+		var syear = document.getElementById('syear').value;
+		var sper = document.getElementById('sper').value;
+		var os= document.getElementById('os').value;
+		var exper= document.getElementById('exper').value;
+		var lan= document.getElementById('lan').value;
+		var proenv= document.getElementById('proenv').value;
+		var tit= document.getElementById('tit').value;
+		var dob= document.getElementById('dob').value;
+		var lank= document.getElementById('lank').value;
+		var nat= document.getElementById('nat').value;
+		var rel= document.getElementById('rel').value;
+		var ms= document.getElementById('ms').value;
+		var add= document.getElementById('add').value;
+		var pla= document.getElementById('pla').value;
+		var date= document.getElementById('date').value;
+		
 		this.setState({details:
 			{
 				name:name,
@@ -70,7 +117,31 @@ class App extends Component {
 				course:course,
 				stream:stream,
 				college:college,
-				board:board
+				board:board,
+				cyear:cyear,
+				cper:cper, 
+				cstream:cstream,
+				hsccol:hsccol,
+				hboard:hboard,
+				colyear:colyear,
+				per:per,
+				school:school,
+				sboard:sboard,
+				syear:syear,
+				sper:sper,
+				os:os,
+				exper:exper,
+				lan:lan,
+				proenv:proenv,
+				tit:tit,
+				dob:dob,
+				lank:lank,
+				nat:nat,
+				rel:rel,
+				ms:ms,
+				add:add,
+				pla:pla,
+				date:date
 			}
 		});
 		this.setState({route:"resume"});
